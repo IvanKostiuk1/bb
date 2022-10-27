@@ -1,0 +1,53 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-image: url(https://bgfons.com/uploads/light/light_texture2246.jpg);
+  background-size: cover;
+  background-position: 36% 0%;
+  background-repeat: no-repeat;
+}
+/* Samma bakgrundsegenskaper som på index.html sidan. Denna sida är inte lika stor och därför ser bakgrunden lite annorlunda. */
+
+section{
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  text-shadow: 1px 1px black;
+}
+/* Bestämmer vita färgen på texten, fonten, dess storlek och skuggan bakom. */
+
+footer{
+  color: white;
+  background-color: rgba(50, 50, 50, 80%);
+  font-family: Monospace, sans-serif;
+  padding: 40px;
+}
+/* Bestämmer vita färgen, grå bakgrundsfärgen, fonten och padding som gör footer större och gör mellanrum mellan texten och vänstra gränsen. */
+
+a{
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  transition: all 750ms;
+  border-radius: 4px;
+  background-color: rgb(50, 50, 50);
+  padding: 4px 7px;
+  box-shadow: 1px 1px 5px 0px black;
+  text-decoration: none;
+}
+/* Färgen på knappen, fonten, övergångstiden, rundhet av kanter, padding som gör knappen större, dess skugga och anger att texten är inte understruken. */
+
+a:hover{
+  color: rgb(0, 200, 60);
+}
+/* Texten på knappen ändrar färg till grön när man har musen över den. */
+
+nav{
+  background-color: rgba(50, 50, 50, 80%);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* Bestämmer <nav>'s bakgrundsfärg och gör den lite större lodrätt. */

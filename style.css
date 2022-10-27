@@ -1,0 +1,163 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+nav{
+  background-color: rgba(50,50,50,80);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* <nav>'s grå bakgrundsfärg, textens font och padding som gör den större lodrätt */
+
+body{
+  background-image: url(https://bgfons.com/uploads/light/light_texture2246.jpg);
+  background-size: cover;
+  background-position: 36% 0%;
+  background-repeat: no-repeat;
+}
+/* Hemsidans bakgrundsbild, sa att den ska vara hela sidans storlek, inte upprepas och ändrade positionen på den så att den syns men också stör inte andar elementer. */
+
+figure{
+  overflow-x: auto;
+  height: 300px;
+  display: flex;
+  grid-column-gap: 5px;
+}
+/* Allt som inte får plats får skrollas vågrätt, sa att dess storlek får inte vara mer än 300px i höjd som gör att det finns inte plats för en till bild under men också att den kan zoomas in, flex hjälper placera dem bättre och gjorde 5px mellanrum mellan bilderna. */
+
+figure img{
+  height: 250px;
+  transition: 1s all 0.1s;
+  max-width: 100%;
+}
+/* Gav höjden på bilderna 250px som är mindre än 300px som är gränsen på föräldern, så att de har plats att zoomas in, sa att alla övergångar sker efter 0.1 sekund och varar 1 sekund. Max-width säger att en bild ska alltid få plats på sidan. */
+
+figure img:hover{
+  width: auto;
+  height: 100%;
+}
+/* När man har musen över en av bilderna, blir höjden 300px och på så sätt zoomas den in. */
+
+footer{
+  background-color: rgba(50,50,50,80%);
+  font-family: monospace, sans-serif;
+  padding: 40px;
+}
+/* Footer har grå bakgrundsfärg, en annan font och padding so gör footer större lodrätt och flyttar texten lite från kanten. */
+
+aside{
+  border-left: 10px solid white;
+  padding-left: 10px;
+  font-family: 'Poppins';
+  text-shadow: 1px 1px black;
+}
+/* Citaterna har en vit kontur på vänstra sidan, 10px avstånd från hemsidans gräns, en annan font och en liten skugga bakom. */
+
+article{
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  text-shadow: 1px 1px black;
+}
+/* Texten har samma font som citaterna, storlek på 18px och en skugga bakom. */
+
+#ommig, #se, #toppen{
+  font-family: 'Poppins', sans-serif;
+  border-radius: 4px;
+  height: 30px;
+  padding: 4px 7px;
+  transition: all 750ms;
+  box-shadow: 1px 1px 5px 0px black;
+  text-decoration: none;
+}
+/* Knapparna "Se Breaking Bad" och "Om Mig" har rundare kanter, grå bakgrundsfärg, höjden på 30px gör att länkarna under "Se Breaking Bad" får inte plats, padding gör knappen större, övergångar tar 750ms att ske, har skuggan bakom sig och är inte understrukna som de är från början. */
+
+#ommig{
+  width: 80px;
+  background-color: rgb(50, 50, 50);
+}
+/* Bredden på "Om Mig" knappen. */
+
+#se{
+  overflow: hidden;
+  width: 150px;
+  background-color: rgb(50, 50, 50);
+}
+/* Bredden på "Se Breaking Bad" och att länkar som får inte plats syns inte. */
+
+#ommig:hover{
+  color: rgb(0, 200, 60);
+}
+/* Texten på "Om Mig" knappen ändrar färg till grön när man har musen över den. */
+
+#se:hover{
+  padding-bottom: 110px;
+  color: rgb(0, 200, 60);
+}
+/* Texten på "Se Breaking Bad" knappen ändrar färg till grön när man har musen över den och det blir mer plats för andra knappar som då börjar synas. */
+
+#toppen:hover{
+  color: rgb(0, 200, 60);
+  background-color: transparent;
+}
+
+li{
+  font-size: 15px;
+  box-shadow: 0 2px 4px black;
+  border-left: 2px solid white;
+  padding-left: 5px;
+}
+/* Länkarna har mindre storlek på texten, svart skugga bakom, en vit kontur till vänster och ligger lägre från kanten med padding. */
+
+#netflix:hover{
+  box-shadow: 0 2px 4px red;
+  border-left-color: red;
+}
+/* När man har musen över Netflix, ändras konturens- och skuggans färg till röd. */
+
+#prime:hover{
+  box-shadow: 0 2px 4px royalblue;
+  border-left-color: royalblue;
+}
+/* När man har musen över Prime Videos, ändras konturens- och skuggans färg till blå. */
+
+
+#apple:hover{
+  box-shadow: 0 2px 4px white;
+  border-left-color: white;
+}
+/* När man har musen över Netflix, ändras skuggans färg till vit. */
+
+
+@media only screen and (max-width: 630px){
+  figure img{
+    height: 200px;
+  }
+/* När man besöker hemsidan med bredden på skärmen mindre än 630px, ändras bildernas höjd till 200px istället för 250px. */
+
+  figure img:hover{
+    width: 100%;
+    height: 230px;
+  }
+/* När man har musen över bilderna, blir bilden hela breddens längd och 230px höga. */
+
+  figure{
+    height: 230px;
+  }
+/* På en mindre skärm, blir hela <figure>'s höjd 230px som gör mindre mellanrum mellan bilderna och texten. */
+}
+
+@media only screen and (max-width: 500px){
+  figure img:hover{
+    height: 200px;
+  }
+/* På en mindre skärm förlorar bilder sina förhållanden när de zoomas in och eftersom mindre skärmar är vanligtvist mobiltelefoner, kan man inte ha musen över dem, därför tog jag inzoomningen bort. */
+
+  #bilder{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+/* När man har mindre plats på skärmen tycker jag att man inte ska ha lika stor margin. */
+}

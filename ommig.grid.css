@@ -1,0 +1,38 @@
+body{
+  display: grid;
+  grid-template: 64px 200px auto 135.5px / 2fr 3fr 3fr 2fr;
+}
+/* Grid har 4 rader och 4 kolumner. */
+
+nav{
+  grid-area: 1 / 1 / 2 / -1;
+  align-self: center;
+}
+/* <nav> ligger på första raden och sträcker sig längs hela bredden. */
+
+#profile{
+  grid-area: 2 / 2 / -1 / -1;
+  margin: 25px;
+}
+/* Profilbilden ligger på andra raden och börjar 25px till höger från andra kolumnen. */
+
+section{
+  grid-area: 3 / 2 / 4 / 4;
+}
+/* Texten ligger på rad 3 och kolumn 2-3. */
+
+footer{
+  grid-area: 4 / 1 / 5 / -1;
+  align-self: center;
+}
+/* Footer ligger på rad 4 och sträcker sig längs hela bredden. */
+
+#profile{
+  width: 150px;
+}
+/* Profilbilden har bredden på 150px. */
+
+a{
+  margin-left: 40px;
+}
+/* Knappen har 40px avstånd från vänstra gränsen på hemsidan. */

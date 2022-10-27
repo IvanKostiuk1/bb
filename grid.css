@@ -1,0 +1,75 @@
+body{
+  display: grid;
+  grid-template: 64px auto auto auto 135.5px / 2fr 3fr 3fr 2fr;
+}
+/* Grid har 5 rader och 4 kolumner */
+
+nav{
+  grid-area: 1 / 1 / 2 / -1;
+  align-self: center;
+}
+/* <nav> ligger på första raden och sträcker sig till hela hemsidans bredd. Align-self gör att knapparna i <nav> centreras lodrätt. */
+
+#logo{
+  grid-area: 2 / 2 / 3 / 4;
+  justify-self: center;
+  margin: 5%;
+  width: 70%;
+  min-width: 400px;
+}
+/* Titeln ligger på rad 2 och kolumner 2-3. Justify-self centrerar bilden vågrätt margin är 5% så att den är responsiv. Den tar inte hela bredden men får inte vara mindre än 400px. */
+
+figure{
+  grid-area: 3 / 1 / 4 / -1;
+  align-self: center;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: 2%;
+}
+/* Bilderna ligger på rad 3 och sträcker sig längs hela bredden av hemsidan. Align-self centrerar bilderna lodrätt och de har 45px mellanrum från vänstra- och högra gränsen. Margin på botten är 2% som gör att den är responsiv. */
+
+section{
+  grid-area: 4 / 1 / 5 / -1;
+}
+/* Texten med citater ligger på rad 4 och sträcker sig längs hela bredden. */
+
+article{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+/* Texten har 20% mellanrum från hemsidans kanter. Ifall jag skulle göra det i grid skulle jag behöva ta bort <section> och därmed skulle det behöva många fler rader. */
+
+aside{
+  margin-bottom: 40px;
+  margin-right: 20%;
+  margin-left: 30px;
+}
+/* Citater har 40px mellanrum på botten som hjälper separera citaten från texten efter. Den har samma margin på högra sidan som vanliga texten som gör att de slutar på ett ställe. Den har även lite avstånd från vänstra sidans gräns. */
+
+#toppen{
+  position: absolute;
+}
+
+footer{
+  grid-area: 5 / 1 / 6 / -1;
+  align-self: center;
+}
+/* Footer ligger på rad 5 och sträcker sig längs hela bredden. Align-self centrerar texten lodrätt. */
+
+#ommig{
+  float: right;
+  margin-right: 40px;
+}
+/* "Om Mig" knappen flyttas längst till höger med 40px avstånd från kanten. */
+
+#se{
+  float: left;
+  position: absolute;
+  margin-left: 40px;
+}
+/* "Se Breaking Bad" knappen ligger längst till vänster med 40px avstånd från kanten. Position: absolute gör att när padding höjden ökar när man har musen över knappen, flyttas inte hela <nav> med den. */
+
+li{
+  margin-top: 3px;
+}
+/* Länkarna har en liten mellanrum på toppen så att den syns inte innan man drar musen över den och så att man ser tydligare länkarnas knapparnas gränser. */
