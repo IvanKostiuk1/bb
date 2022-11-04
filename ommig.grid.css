@@ -2,37 +2,55 @@ body{
   display: grid;
   grid-template: 64px 200px auto 135.5px / 2fr 3fr 3fr 2fr;
 }
-/* Grid har 4 rader och 4 kolumner. */
+/* Grid har 4 rader och 4 kolumner.*/
 
 nav{
   grid-area: 1 / 1 / 2 / -1;
   align-self: center;
 }
-/* <nav> ligger på första raden och sträcker sig längs hela bredden. */
+/* <nav> ligger på första raden och sträcker sig längs hela bredden.*/
 
 #profile{
-  grid-area: 2 / 2 / -1 / -1;
+  grid-area: 2 / 1 / -1 / -1;
   margin: 25px;
+  margin-left: 23%;
+  width: 150px;
 }
-/* Profilbilden ligger på andra raden och börjar 25px till höger från andra kolumnen. */
+/* Profilbilden ligger på andra raden, har margin 25px runt sig men 23% till vänster som gör den responsiv och är lite större än textens.*/
 
 section{
-  grid-area: 3 / 2 / 4 / 4;
+  grid-area: 3 / 1 / 4 / -1;
+  margin-left: 20%;
+  margin-right: 20%;
 }
-/* Texten ligger på rad 3 och kolumn 2-3. */
+/* Texten ligger på rad 3 och sträcker sig längs hela bredden. Jag ville ha samma avstånd från kanter som på index.html så därför använde jag margin istället för grid. Det är på så sätt även lättare att ändra den för mindre skärmar.*/
 
 footer{
   grid-area: 4 / 1 / 5 / -1;
   align-self: center;
 }
-/* Footer ligger på rad 4 och sträcker sig längs hela bredden. */
-
-#profile{
-  width: 150px;
-}
-/* Profilbilden har bredden på 150px. */
+/* Footer ligger på rad 4 och sträcker sig längs hela bredden. Align-self centrerar texten lodrätt.*/
 
 a{
   margin-left: 40px;
 }
-/* Knappen har 40px avstånd från vänstra gränsen på hemsidan. */
+/* Knappen har 40px avstånd från vänstra kanten på hemsidan.*/
+
+@media only screen and (max-width: 630px){
+  section{
+    font-size: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+/* Samma ändringar på texten som på index.html.*/
+
+  a{
+    margin-left: 20px
+  }
+/* Samma ändringar på knappen som på index.html.*/
+
+  #profile{
+    margin-left: 13%;
+  }
+/* Profilbilden minskar sitt avstånd till vänstra kanten som gör att den fortfarande börjar lite till höger om texten.*/
+}
