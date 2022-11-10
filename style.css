@@ -15,12 +15,17 @@ nav{
 /* <nav>'s grå bakgrundsfärg och padding som gör den större lodrätt.*/
 
 body{
-  background-image: url(img/bakgrund.jpeg);
+  background-image: url(img/bakgrund.webp);
   background-size: cover;
   background-position: 36% 0%;
   background-repeat: no-repeat;
 }
 /* Hemsidans bakgrundsbild som tar hela sidans storlek, inte upprepas och jag ändrade positionen på den så att den syns men samtidigt inte stör de andra elementer med sina ljusa färger.*/
+
+h1{
+  display: none;
+}
+/* Jag använde en bild som ett heading, därför gör jag en osynlig heading för att få ett bättre tillgänglighet.*/
 
 figure{
   overflow-x: auto;
